@@ -1,3 +1,3 @@
 **Personal Website**
-###this is small text
 
+These are the files for my personal website/portfolio
