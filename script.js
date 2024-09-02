@@ -1,18 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const elements = document.querySelectorAll('.slide-in');
+// script.js
 
-    function checkSlide() {
-        elements.forEach(element => {
-            const slideInAt = (window.scrollY + window.innerHeight) - element.offsetHeight / 2;
-            const isHalfShown = slideInAt > element.offsetTop;
-            if (isHalfShown) {
-                element.classList.add('show');
-            } else {
-                element.classList.remove('show');
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('slide-in-visible');
             }
         });
-    }
+    });
 
-    window.addEventListener('scroll', checkSlide);
-    window.addEventListener('load', checkSlide);
+    document.querySelectorAll('.slide-in').forEach(section => {
+        observer.observe(section);
+    });
 });
