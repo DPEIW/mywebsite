@@ -13,3 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 });
+
+function openModal(imgElement) {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+
+    modal.style.display = "block";
+    modalImage.src = imgElement.src;
+    captionText.innerHTML = imgElement.alt;
+}
+
+// Close the modal when the close button is clicked
+function closeModal() {
+    const modal = document.getElementById("imageModal");
+    modal.style.display = "none";
+}

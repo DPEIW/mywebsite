@@ -102,21 +102,27 @@
                             <p>Prototype of a braille keyboard with a built-in display to aid the visually impaired. 
                                 The mechanism reads the content of a text box and makes it possible to feel the pattern. Prototype modeled in Blender and mechanism made using lego</p>
                             <br> </br>
-                            <img src="braillekeyboardblender.png" alt="Braille Keyboard Prototype"  width="360" height="250">
-                            <img src="braileekeyboardlego.jpg" alt="Gym Prototype"  width="360" height="250">
+                            <img src="braillekeyboardblender.png" alt="Braille Keyboard Blender Prototype"  width="360" height="250" onclick="openModal(this)">
+                            <img src="braileekeyboardlego.jpg" alt="Braille Keyboard Lego Prototype"  width="360" height="250" onclick="openModal(this)">
                         </li>
                         <li>
                             <h3>MYP 5: Physical Gym Prototype</h3>
                             <p>Physical prototype of a gym proposed for the school to aid students in improving physical fitness.</p>
                             <br> </br>
-                            <img src="IMG-8535.jpg" alt="Gym Prototype" width="360" height="250">
-                            <img src="IMG-8536.jpg" alt="Gym Prototype" width="360" height="250">
+                            <img src="IMG-8535.jpg" alt="Gym Prototype Image 1" width="360" height="250" onclick="openModal(this)">
+                            <img src="IMG-8536.jpg" alt="Gym Prototype Image 2" width="360" height="250" onclick="openModal(this)">
                         </li>
                     </ul>
                 </li>
             </ol>
         </section> 
     </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
 
     <footer>
         <p>&copy; 2024 My Portfolio. All rights reserved.</p>
